@@ -1,3 +1,3 @@
 # pystart
 
-Describe your project here.
+My opinionated Python project template.
