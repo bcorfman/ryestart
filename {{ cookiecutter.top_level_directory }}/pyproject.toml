@@ -1,0 +1,84 @@
+[project]
+name = "bfs"
+version = "0.3.0"
+description = "A non-trivial Python DevOps project, implementing search through a grid map."
+authors = [{name = "Brandon Corfman", email = "bcorfman@fastmail.fm"}]
+dependencies = [
+    "streamlit>=1.30.0",
+    "plotly>=5.18.0",
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[tool.poetry]
+name = "bfs"
+version = "0.3.0"
+description = "A non-trivial Python DevOps project, implementing search through a grid map."
+authors = ["Brandon Corfman <bcorfman@fastmail.fm>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.30.0"
+plotly = "^5.18.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+yapf = "^0.40.2"
+pytest-cov = "^4.1.0"
+pytest-playwright = "^0.4.3"
+pylint = "^3.0.3"
+black = "^23.12.1"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=7.4.4",
+    "yapf>=0.40.2",
+    "pytest-cov>=4.1.0",
+    "pytest-playwright>=0.4.3",
+    "pylint>=3.0.3",
+    "black>=23.12.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bfs"]
+
+[tool.yapf]
+column_limit = 100
+indent_dictionary_value = "True"
+allow_split_before_dict_value = "False"
+
+[tool.pytest.ini_options]
+addopts = "--cov-branch --cov-report term"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+markers=["unit: Unit tests.",
+         "system: System (browser-based) tests."]
+         
+[tool.coverage.run]
+source = ["core"]
+
+[tool.pylint]
+max-line-length = 100
+disable = [
+    "C0103", # (invalid-name)
+    "C0114", # (missing-module-docstring)
+    "C0115", # (missing-class-docstring)
+    "C0116", # (missing-function-docstring)
+    "C0415", # (import-outside-toplevel)
+    "R0401", # (cyclic-import)
+    "R0902", # (too-many-instance-attributes)
+    "R0903", # (too-few-public-methods)
+    "R0913", # (too-many-arguments)
+    "R0914", # (too-many-locals)
+    "W0105", # (pointless-string-statement)
+]
