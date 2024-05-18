@@ -1,0 +1,56 @@
+[project]
+name = "{{ cookiecutter.project_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+authors = [{name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"}]
+dependencies = [
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">= {{ cookiecutter.python_version }}"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{ cookiecutter.repo_name }}"]
+
+[tool.yapf]
+column_limit = 100
+indent_dictionary_value = "True"
+allow_split_before_dict_value = "False"
+
+[tool.pytest.ini_options]
+addopts = "--cov-branch --cov-report core"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+markers=["unit: Unit tests.",
+         "system: System (browser-based) tests."]
+         
+[tool.coverage.run]
+source = ["core"]
+
+[tool.pylint]
+max-line-length = 100
+disable = [
+    "C0103", # (invalid-name)
+    "C0114", # (missing-module-docstring)
+    "C0115", # (missing-class-docstring)
+    "C0116", # (missing-function-docstring)
+    "C0415", # (import-outside-toplevel)
+    "R0401", # (cyclic-import)
+    "R0902", # (too-many-instance-attributes)
+    "R0903", # (too-few-public-methods)
+    "R0913", # (too-many-arguments)
+    "R0914", # (too-many-locals)
+    "W0105", # (pointless-string-statement)
+]
