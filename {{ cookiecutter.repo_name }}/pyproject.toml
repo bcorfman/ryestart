@@ -30,7 +30,7 @@ indent_dictionary_value = "True"
 allow_split_before_dict_value = "False"
 
 [tool.pytest.ini_options]
-addopts = "--cov-branch --cov-report core"
+addopts = "--cov-branch --cov-report term --cov=core"
 testpaths = ["tests"]
 filterwarnings = ["ignore::DeprecationWarning"]
 markers=["unit: Unit tests.",

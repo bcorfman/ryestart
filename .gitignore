@@ -8,3 +8,6 @@ wheels/
 
 # venv
 .venv
+
+# Mac files
+.DS_Store
