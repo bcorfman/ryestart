@@ -80,7 +80,7 @@ def main():
         if not rye_installed:
             print("Could not perform brew install for Rye.")
             return 
-   
+    
     username = None
     pat = None
     get_pat, stdout = subproc_with_output("echo url=https://github.com | git credential fill")
