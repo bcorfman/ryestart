@@ -10,21 +10,23 @@ To be clear, this template is **not** for Python libraries.
 * A Makefile for handling project tasks. 
 * Batteries included: [ipython], [pytest], and [pytest-cov] installed as development dependencies.
 * A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save, plus other Makefile tasks within the sidebar.
+* A GitHub repo will be set up for your project automatically, with the initial code pushed into it. 
 
 ## Assumptions
 
-* The template requires Mac OS X, Linux, or WSL2 on Windows with a quality Linux distro like Ubuntu.
+* The template requires Mac OS X, Linux, or WSL2 on Windows with a quality Linux distro like Ubuntu. (WSL2/Ubuntu is what I use.)
 * [Homebrew must be installed](https://brew.sh).
 
 ## Quickstart
 
 * See Assumptions above.
 
-* Install Rye, then install Cookiecutter using `rye tools install cookiecutter`. This makes Cookiecutter available as a [global tool](https://rye-up.com/guide/tools/). This is how I do it.
+* [Install Rye](https://rye-up.com) then Cookiecutter using `rye tools install cookiecutter`. This makes Cookiecutter available as a [global tool](https://rye-up.com/guide/tools/). This is what I do.
 
 OR
 
 * Install the latest Cookiecutter [using their instructions](https://cookiecutter.readthedocs.io/en/2.6.0/installation.html). This has the disadvantage of tying the tool to a system-level Python, or you can use something like `pipx` for an isolated install. However, this is yet another Python dependency manager that you will need to manage.
+
 
 Now generate the project:
 
@@ -34,7 +36,9 @@ Get inside the project:
 
     cd <repo_name>
 
-Start working:
+Start working!
+
+## Available Makefile tasks
 
     make devinstall   # installs all project & development tooling. Executed by Cookiecutter in post_gen_project hook.
     make install      # installs project files only. No development toolking.
