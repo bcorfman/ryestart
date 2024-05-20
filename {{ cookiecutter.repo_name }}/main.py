@@ -1,5 +1,8 @@
+from core.hello import hello_world
+
+
 def main():
-    pass
+    hello_world()
 
 
 if __name__ == "__main__":

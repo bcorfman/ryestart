@@ -1,7 +1,7 @@
 PACKAGE := {{ cookiecutter.repo_name }}
 PACKAGE_DIR := src/${PACKAGE}
 SHELL := env PYTHON_VERSION={{ cookiecutter.python_version}} /bin/bash
-.SILENT: devinstall install test lint format
+.SILENT: run devinstall install test lint format
 PYTHON_VERSION ?= {{ cookiecutter.python_version}}
 
 setup:
