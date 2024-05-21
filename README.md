@@ -53,8 +53,10 @@ Start working!
     make install      # installs project files only. No development toolking.
     make run          # prints "Hello World" as a sample
     make test         # tests that "Hello World" is printed
-    make lint         # automatically orders imports and fixes code issues with Ruff. Customize in pyproject.toml.
-    make format       # automatically formats your code with Ruff. Customize in pyproject.toml.
+    make lint         # automatically orders imports and fixes code issues with Ruff. 
+                      # Linting is customized in pyproject.toml
+    make format       # Automatically formats your code and imports with Ruff. 
+                      # Formatting is customized in pyproject.toml.
 
 ## Directory structure
 
