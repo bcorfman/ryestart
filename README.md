@@ -32,7 +32,16 @@ Now generate the project:
 
     cookiecutter gh:bcorfman/pystart
 
-Get inside the project:
+The setup does several things:
+  - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python information.
+  - Installs the GitHub CLI and Rye using Homebrew, if they aren't installed already.
+  - Pulls your GitHub username and PAT from Git Credential Manager and uses them to authenticate to your account.
+  - Checks for the existence of the Repo name on your GitHub account; if it's already there, the setup aborts with an error.
+  - 'git init` is called inside the project directory to create a Git repo.
+  - `make devinstall` is executed to install some basic Python dev libraries: `ipython`, `pytest` and `pytest-cov`.
+  - Finally, the configured project is committed to the new Git repo and pushed up to your GitHub repo as well. 
+
+Get inside the newly created project:
 
     cd <repo_name>
 
@@ -67,7 +76,7 @@ This is what your new project will look like:
     |   ├── __init__.py           <- Makes the core directory a module that can be imported
     |   └── hello.py              <- A starter submodule that prints "Hello World!"
     |
-    ├── tests                     
+    └── tests                     
         ├── __init__.py           <- Makes the tests directory a module that can be imported
         └── test_hello.py         <- tests that "Hello World!" is printed by the core.hello module
 
