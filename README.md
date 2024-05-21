@@ -2,14 +2,14 @@
 
 My opinionated [Cookiecutter] template for beginning a Python application with modern tooling.
 
-To be clear, this template is **not** for Python libraries. 
+To be clear, this template is **NOT** for Python libraries. 
 
 ## Features
 
 * [Rye] for managing packages and virtualenvs.
 * A Makefile for handling project tasks. 
 * Batteries included: [ipython], [pytest], and [pytest-cov] installed as development dependencies.
-* A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save, plus other Makefile tasks within the sidebar.
+* A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save (via EmeraldWalk's [Run on Save]), plus other Makefile tasks within the sidebar (via Carlos A. Gomes' [Make support and task provider].)
 * A GitHub repo will be set up for your project automatically, with the initial code pushed into it. 
 
 ## Assumptions
@@ -88,4 +88,6 @@ This is what your new project will look like:
 [Rye]: https://rye-up.com
 [ipython]: https://ipython.org
 [pytest]: https://docs.pytest.org/en
+[Run on Save]: https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave
+[Make support and task provider]: https://marketplace.visualstudio.com/items?itemName=carlos-algms.make-task-provider
 [pytest-cov]: https://pytest-cov.readthedocs.io/en/latest/readme.html
