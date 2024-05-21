@@ -34,7 +34,7 @@ Now generate the project:
 
 The setup does several things:
   - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python information.
-  - Installs the GitHub CLI and Rye using Homebrew, if they aren't installed already.
+  - Installs the GitHub CLI and/or Rye via Homebrew, if they aren't installed already.
   - Pulls your GitHub username and PAT from Git Credential Manager and uses them to authenticate to your account.
   - Checks for the existence of the Repo name on your GitHub account; if it's already there, the setup aborts with an error.
   - `git init` is called inside the project directory to create a Git repo.
