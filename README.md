@@ -37,7 +37,7 @@ The setup does several things:
   - Installs the GitHub CLI and Rye using Homebrew, if they aren't installed already.
   - Pulls your GitHub username and PAT from Git Credential Manager and uses them to authenticate to your account.
   - Checks for the existence of the Repo name on your GitHub account; if it's already there, the setup aborts with an error.
-  - 'git init` is called inside the project directory to create a Git repo.
+  - `git init` is called inside the project directory to create a Git repo.
   - `make devinstall` is executed to install some basic Python dev libraries: `ipython`, `pytest` and `pytest-cov`.
   - Finally, the configured project is committed to the new Git repo and pushed up to your GitHub repo as well. 
 
