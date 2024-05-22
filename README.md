@@ -55,9 +55,9 @@ ___
 
 `ryestart` is built the way I like it. But what if it's not configured the way you work?
 
-* One regular annoyance is that Cookiecutter will always prompt you for your name and your email ... Unless you like typing these over and over, the best thing is to create a .cookiecutterrc inside your home directory.
+* One regular annoyance is that Cookiecutter will always prompt you for your name and your email ... Unless you like typing these over and over, the best thing is to create a `.cookiecutterrc` inside your home directory.
   
-  For instance, my ~/.cookiecutterrc looks like this:
+  For instance, my `~/.cookiecutterrc` looks like this:
 
   ```
   default_context:
@@ -65,7 +65,7 @@ ___
     author_email: "h9tbgnbbkj@privaterelay.appleid.com"
   ```
   
-* If you want to install different default libraries inside your project besides the ones I've chosen, modify the `devinstall:` section of the [Makefile](https://github.com/bcorfman/ryestart/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile).
+* If you want to install different default libraries inside your project besides the ones I've chosen, modify the `devinstall` section of the [Makefile](https://github.com/bcorfman/ryestart/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile).
 * Finally, if you want to customize the entire setup process, take a look in [post_gen_project.py](https://github.com/bcorfman/ryestart/blob/main/hooks/post_gen_project.py). 
 * Since `ryestart` has an permissive license, fork the project and contribute back via a pull request, or turn that fork into [a standalone repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/detaching-a-fork) and make the customizations your own. 
 
