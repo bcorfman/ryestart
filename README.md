@@ -66,8 +66,8 @@ ___
   ```
   
 * If you want to install different default libraries inside your project besides the ones I've chosen, modify the `devinstall` section of the [Makefile](https://github.com/bcorfman/ryestart/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile).
-* Finally, if you want to customize the entire setup process, take a look in [post_gen_project.py](https://github.com/bcorfman/ryestart/blob/main/hooks/post_gen_project.py). 
-* Since `ryestart` has a permissive [license](https://github.com/bcorfman/ryestart/blob/main/LICENSE), fork the project and contribute back via a pull request, or turn that fork into [a standalone repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/detaching-a-fork) and make the customizations your own. 
+* If you want to customize the entire setup process, take a look in [post_gen_project.py](https://github.com/bcorfman/ryestart/blob/main/hooks/post_gen_project.py). 
+* Finally, since `ryestart` has a permissive [license](https://github.com/bcorfman/ryestart/blob/main/LICENSE), fork the project and contribute back via a pull request, or turn that fork into [a standalone repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/detaching-a-fork) and make the customizations your own. 
 
 ___________________________
 ## Available Makefile tasks
