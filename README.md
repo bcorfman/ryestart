@@ -4,6 +4,7 @@ My opinionated [Cookiecutter] template for beginning a Python application with m
 
 To be clear, this template is **NOT** for Python libraries. 
 
+_____
 ## Features
 
 * [Rye] and pyproject.toml for managing packages and virtualenvs. Rye also [downloads and installs Python versions automatically](https://rye-up.com/guide/commands/pin/) if needed, so you don't have to.
@@ -12,18 +13,20 @@ To be clear, this template is **NOT** for Python libraries.
 * A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save (via EmeraldWalk's [Run on Save]), plus other Makefile tasks within the sidebar (via Carlos A. Gomes' [Make support and task provider].)
 * A GitHub repo will be set up for your project automatically, with the initial code pushed into it. 
 
+______
 ## Assumptions
 
 * The template requires Mac OS X, Linux, or WSL2 on Windows with a quality Linux distro like Ubuntu. (WSL2/Ubuntu is what I use.)
 * [Homebrew must be installed](https://brew.sh).
 
+_______
 ## Quickstart
 
 * See Assumptions above.
 
 * [Install Rye](https://rye-up.com) then Cookiecutter using `rye tools install cookiecutter`. This makes Cookiecutter available as a [global tool](https://rye-up.com/guide/tools/). This is what I do.
 
-OR
+  OR
 
 * Install the latest Cookiecutter [using their instructions](https://cookiecutter.readthedocs.io/en/2.6.0/installation.html). This has the disadvantage of tying the tool to a system-level Python, or you can use something like `pipx` for an isolated install. However, this is yet another Python dependency manager that you will need to manage.
 
@@ -47,6 +50,7 @@ Get inside the newly created project:
 
 _Start working!_
 
+___________________________
 ## Available Makefile tasks
 
     make devinstall   # installs all project & development tooling. Executed by Cookiecutter in post_gen_project hook.
@@ -58,6 +62,7 @@ _Start working!_
     make format       # Automatically formats your code and imports with Ruff. 
                       # Formatting is customized in pyproject.toml.
 
+______________________
 ## Directory structure
 
 This is what your new project will look like:
