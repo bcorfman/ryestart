@@ -6,7 +6,7 @@ To be clear, this template is **NOT** for Python libraries.
 
 ## Features
 
-* [Rye] and pyproject.toml for managing packages and virtualenvs.
+* [Rye] and pyproject.toml for managing packages and virtualenvs. Rye also [downloads and installs Python versions automatically](https://rye-up.com/guide/commands/pin/) if needed, so you don't have to.
 * A Makefile for handling project tasks. (Noah Gift on [Why You Would Want a Makefile in Your Python Project](https://www.youtube.com/watch?v=Kvxaj6pHeVA&t=624s).)
 * Batteries included: [ipython], [pytest], and [pytest-cov] installed as development dependencies.
 * A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save (via EmeraldWalk's [Run on Save]), plus other Makefile tasks within the sidebar (via Carlos A. Gomes' [Make support and task provider].)
@@ -33,7 +33,7 @@ Now generate the project:
     cookiecutter gh:bcorfman/pystart
 
 The setup does several things:
-  - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python information.
+  - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python version that will be installed by Rye.
   - Installs the GitHub CLI and/or Rye via Homebrew, if they aren't installed already.
   - Pulls your GitHub username and PAT from Git Credential Manager and uses them to authenticate to your account.
   - Checks for the existence of the Repo name on your GitHub account; if it's already there, the setup aborts with an error.
