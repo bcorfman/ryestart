@@ -6,8 +6,8 @@ To be clear, this template is **NOT** for Python libraries.
 
 ## Features
 
-* [Rye] for managing packages and virtualenvs.
-* A Makefile for handling project tasks. (Noah Gift on [Why You Would Want a Makefile in Your Python Project](https://www.youtube.com/watch?v=Kvxaj6pHeVA&t=624s). I agree with him on Makefiles, but just use Rye and pyproject.toml for the other aspects instead of the ancient Pip.)
+* [Rye] and pyproject.toml for managing packages and virtualenvs.
+* A Makefile for handling project tasks. (Noah Gift on [Why You Would Want a Makefile in Your Python Project](https://www.youtube.com/watch?v=Kvxaj6pHeVA&t=624s).)
 * Batteries included: [ipython], [pytest], and [pytest-cov] installed as development dependencies.
 * A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save (via EmeraldWalk's [Run on Save]), plus other Makefile tasks within the sidebar (via Carlos A. Gomes' [Make support and task provider].)
 * A GitHub repo will be set up for your project automatically, with the initial code pushed into it. 
