@@ -86,25 +86,25 @@ ______________________
 
 This is what your new project will look like:
 
-    ├── .gitignore                <- A modest Python .gitignore customized for this project
-    ├── LICENSE                   <- The project's MIT license with your name.
-    ├── README.md                 <- The top-level README for developers using this project.
-    ├── Makefile                  <- Configure/build/formatting/test tasks that can be run from the command-line. 
-    ├── main.py                   <- The top-level application file.
-    ├── pyproject.toml            <- Rye-compatible TOML file reproducing the development environment
+    ├── .gitignore            <- A modest Python .gitignore customized for this project
+    ├── LICENSE               <- The project's MIT license with your name.
+    ├── README.md             <- The top-level README for developers using this project.
+    ├── Makefile              <- Configure/build/formatting/test tasks that can be run from the command-line. 
+    ├── main.py               <- The top-level application file.
+    ├── pyproject.toml        <- Rye-compatible TOML file reproducing the development environment
     │    
-    ├── .vscode                   <- Visual Studio Code configuration files
-    |   ├── extensions.json       <- VSCode extension recommendations that will make your development easier.
-    |   ├── launch.json           <- Configures VSCode to run and debug the project.
-    |   └── settings.json         <- Calls RunOnSave extension to format and lint the code whenever the project is saved.
+    ├── .vscode               <- Visual Studio Code configuration files
+    |   ├── extensions.json   <- VSCode extension recommendations that will make your development easier.
+    |   ├── launch.json       <- Configures VSCode to run and debug the project.
+    |   └── settings.json     <- Calls RunOnSave extension to format and lint the code whenever the project is saved.
     |
-    ├── core                      <- Core Python source files
-    |   ├── __init__.py           <- Makes the core directory a module that can be imported
-    |   └── hello.py              <- A starter submodule that prints "Hello World!"
+    ├── core                  <- Core Python source files
+    |   ├── __init__.py       <- Makes the core directory a module that can be imported
+    |   └── hello.py          <- A starter submodule that prints "Hello World!"
     |
     └── tests                     
-        ├── __init__.py           <- Makes the tests directory a module that can be imported
-        └── test_hello.py         <- tests that "Hello World!" is printed by the core.hello module
+        ├── __init__.py       <- Makes the tests directory a module that can be imported
+        └── test_hello.py     <- tests that "Hello World!" is printed by the core.hello module
 
 
 
