@@ -45,7 +45,7 @@ Get inside the newly created project:
 
     cd <repo_name>
 
-Start working!
+_Start working!_
 
 ## Available Makefile tasks
 
