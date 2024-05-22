@@ -62,7 +62,7 @@ ___
   ```
   default_context:
     author_name: "Brandon Corfman"
-    author_email: "h9tbgnbbkj@privaterelay.appleid.com"
+    author_email: "h9tbgnbbk@privaterelay.appleid.com"
   ```
   
 * If you want to install different default libraries inside your project besides the ones I've chosen, modify the `devinstall` section of the [Makefile](https://github.com/bcorfman/ryestart/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile).
