@@ -33,7 +33,7 @@ _______
 
 Now generate the project:
 
-    cookiecutter gh:bcorfman/pystart
+    cookiecutter gh:bcorfman/ryestart
 
 The setup does several things:
   - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python version that will be installed by Rye.
