@@ -72,7 +72,8 @@ ___
 ___________________________
 ## Available Makefile tasks
 
-    make devinstall   # installs all project & development tooling. Executed by Cookiecutter in post_gen_project hook.
+    make devinstall   # installs all project & development tooling. Executed by Cookiecutter in
+                      #   post_gen_project.py hook.
     make install      # installs project files only. No development toolking.
     make run          # prints "Hello World" as a sample
     make test         # tests that "Hello World" is printed
