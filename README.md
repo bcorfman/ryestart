@@ -1,6 +1,6 @@
-# pystart
+# ryestart
 
-My opinionated [Cookiecutter] template for beginning a Python application with modern tooling.
+My opinionated [Cookiecutter] template for beginning a Python application with Rye dependency management and other modern tooling.
 
 To be clear, this template is **NOT** for Python libraries. 
 
