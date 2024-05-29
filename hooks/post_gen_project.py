@@ -107,7 +107,7 @@ def main():
 
     repo_check_fail, stdout = subproc_with_output(f'git ls-remote -h "https://github.com/{username}/{MODULE_NAME}.git" &> /dev/null',
                                                   suppress_failure=True)
-    if repo_check_fail:
+    if not repo_check_fail:
         print(f"Found an existing repo called {MODULE_NAME} in your GitHub account. Please delete before continuing.")
         return
 
