@@ -18,6 +18,9 @@ ______
 
 * The template requires Mac OS X, Linux, or WSL2 on Windows with a quality Linux distro like Ubuntu. (WSL2/Ubuntu is what I use.)
 * [Homebrew must be installed](https://brew.sh).
+* Git is linked to an [appropriate credential manager](https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/credstores.md) on your system.
+  - On WSL2/Ubuntu, my preference is to use the Windows Credential Manager: `git config --global credential.credentialStore wincredman`
+  - On Mac OS X, my preference is to use the default Keychain Access. If you need to set it yourself for some reason, you can do it with `git config --global credential.credentialStore keychain`
 
 _______
 ## Quickstart
