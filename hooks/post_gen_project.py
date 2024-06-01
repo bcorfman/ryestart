@@ -50,9 +50,13 @@ def subproc_with_output(cmd, **args):
     except OSError as e:
         if not args.get('suppress_failure'):
             print("Execution failed:", e, file=proc.stderr)
+        else:
+            success = True
     except CalledProcessError as e:
         if not args.get('suppress_failure'):
             print("Execution failed:", e, file=proc.stderr)
+        else:
+            success = True
     return success, proc.stdout
 
 
