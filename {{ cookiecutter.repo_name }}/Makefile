@@ -1,7 +1,7 @@
 PACKAGE := {{ cookiecutter.repo_name }}
 PACKAGE_DIR := src/${PACKAGE}
 SHELL := env PYTHON_VERSION={{ cookiecutter.python_version}} /bin/bash
-.SILENT: run devinstall install test lint format
+.SILENT: install devinstall tools test run lint format
 PYTHON_VERSION ?= {{ cookiecutter.python_version}}
 
 setup:
@@ -13,15 +13,16 @@ install:
 
 devinstall:
 	uv python pin $(PYTHON_VERSION)
+	uv add pytest pytest-cov --dev
 	uv sync --all-extras --dev
 
+
 tools:
-	uv tool install ruff
-	uv tool install pytest
-	uv tool install ipython
+	uv tool install ruff --force
+	uv tool install ipython --force
 
 test:
-	uv tool run pytest
+	uv run pytest
 
 run: 
 	uv run python main.py
