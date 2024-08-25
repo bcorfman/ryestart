@@ -24,10 +24,6 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/{{ cookiecutter.repo_name }}"]
 
-[tool.yapf]
-column_limit = 100
-indent_dictionary_value = "True"
-allow_split_before_dict_value = "False"
 
 [tool.pytest.ini_options]
 addopts = "--cov-branch --cov-report term --cov=core"
@@ -39,18 +35,26 @@ markers=["unit: Unit tests.",
 [tool.coverage.run]
 source = ["core"]
 
-[tool.pylint]
-max-line-length = 100
-disable = [
-    "C0103", # (invalid-name)
-    "C0114", # (missing-module-docstring)
-    "C0115", # (missing-class-docstring)
-    "C0116", # (missing-function-docstring)
-    "C0415", # (import-outside-toplevel)
-    "R0401", # (cyclic-import)
-    "R0902", # (too-many-instance-attributes)
-    "R0903", # (too-few-public-methods)
-    "R0913", # (too-many-arguments)
-    "R0914", # (too-many-locals)
-    "W0105", # (pointless-string-statement)
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
 ]

@@ -5,26 +5,31 @@ SHELL := env PYTHON_VERSION={{ cookiecutter.python_version}} /bin/bash
 PYTHON_VERSION ?= {{ cookiecutter.python_version}}
 
 setup:
-	curl -sSf https://rye-up.com/get | RYE_NO_AUTO_INSTALL=1 RYE_INSTALL_OPTION="--yes" bash
+	curl -LsSf https://astral.sh/uv/install.sh | sh
 
 install:
-	$(HOME)/.rye/shims/rye sync --no-lock --no-dev
+	uv python pin $(PYTHON_VERSION)
+	uv sync --frozen --no-dev
 
 devinstall:
-	$(HOME)/.rye/shims/rye pin $(PYTHON_VERSION)
-	$(HOME)/.rye/shims/rye add ipython pytest pytest-cov --dev
-	$(HOME)/.rye/shims/rye sync
+	uv python pin $(PYTHON_VERSION)
+	uv sync --all-extras --dev
+
+tools:
+	uv tool install ruff
+	uv tool install pytest
+	uv tool install ipython
 
 test:
-	$(HOME)/.rye/shims/rye run pytest
+	uv tool run pytest
 
 run: 
-	$(HOME)/.rye/shims/rye run python main.py
+	uv run python main.py
 
 lint:
-	$(HOME)/.rye/shims/rye lint -q -- --select I --fix 
+	uv tool run ruff check -q --select I --fix  
 
 format:
-	$(HOME)/.rye/shims/rye fmt
+	uv tool run ruff format
 
-all: devinstall lint format test
+all: devinstall tools lint format test
