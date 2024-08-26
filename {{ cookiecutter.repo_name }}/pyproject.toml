@@ -26,17 +26,19 @@ packages = ["src/{{ cookiecutter.repo_name }}"]
 
 
 [tool.pytest.ini_options]
-addopts = "--cov-branch --cov-report term --cov=core"
+addopts = "--cov-branch --cov-report term --cov=src"
 testpaths = ["tests"]
 filterwarnings = ["ignore::DeprecationWarning"]
 markers=["unit: Unit tests.",
          "system: System (browser-based) tests."]
          
 [tool.coverage.run]
-source = ["core"]
+source = ["src"]
 
 [tool.ruff]
-line-length = 100
+line-length = 120
+fix = true
+target-version = "py312"
 
 [tool.ruff.format]
 quote-style = "double"
@@ -58,3 +60,4 @@ select = [
     # isort
     "I",
 ]
+extend-fixable = ["B"]
