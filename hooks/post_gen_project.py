@@ -4,7 +4,7 @@ from pathlib import Path
 from subprocess import call, run, CompletedProcess, CalledProcessError
 
 PROJECT_DIRECTORY = Path.cwd()
-MODULE_NAME = "{{ cookiecutter.repo_name }}"
+REPO_NAME = "{{ cookiecutter.repo_name }}"
 
 brew_working = False
 gh_cli_and_uv_installed = False
@@ -109,10 +109,10 @@ def main():
         print("Could not authenticate to GitHub. Check PAT content.")
         return 
 
-    repo_check_fail, stdout = subproc_with_output(f'git ls-remote -h "https://github.com/{username}/{MODULE_NAME}.git" &> /dev/null',
+    repo_check_fail, stdout = subproc_with_output(f'git ls-remote -h "https://github.com/{username}/{REPO_NAME}.git" &> /dev/null',
                                                   suppress_failure=True)
     if not repo_check_fail:
-        print(f"Found an existing repo called {MODULE_NAME} in your GitHub account. Please delete before continuing.")
+        print(f"Found an existing repo called {REPO_NAME} in your GitHub account. Please delete before continuing.")
         return
 
     git_initialized, _ = subproc_with_output("git init")
