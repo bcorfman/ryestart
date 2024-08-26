@@ -28,7 +28,7 @@ run:
 	uv run python main.py
 
 lint:
-	uv tool run ruff check -q --select I --fix  
+	uv tool run ruff check -q
 
 format:
 	uv tool run ruff format
