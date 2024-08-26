@@ -16,7 +16,6 @@ devinstall:
 	uv add pytest pytest-cov --dev
 	uv sync --all-extras --dev
 
-
 tools:
 	uv tool install ruff --force
 	uv tool install ipython --force

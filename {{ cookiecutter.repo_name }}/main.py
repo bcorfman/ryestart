@@ -1,4 +1,4 @@
-from core.hello import hello_world
+from {{ cookiecutter.package_name }}.example import hello_world
 
 
 def main():
