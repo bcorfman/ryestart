@@ -1,13 +1,13 @@
 # ultraviolet
 
-My opinionated [Cookiecutter] template for beginning a Python application with Uv dependency management and other modern tooling.
+My opinionated [Cookiecutter] template for beginning a Python application with uv dependency management and other modern tooling.
 
 _____
 ## Features
 
-* [Uv] and pyproject.toml for managing packages and virtualenvs. Uv also [downloads and installs Python versions automatically](https://docs.astral.sh/uv/#python-management) if needed, so you don't have to.
+* [uv] and pyproject.toml for managing packages and virtualenvs. uv also [downloads and installs Python versions automatically](https://docs.astral.sh/uv/#python-management) if needed, so you don't have to.
 * A Makefile for handling project tasks. (Noah Gift on [Why You Would Want a Makefile in Your Python Project](https://www.youtube.com/watch?v=Kvxaj6pHeVA&t=624s).)
-* Batteries included: [ipython] installed as a Uv tool, and [pytest], and [pytest-cov] installed as development dependencies.
+* Batteries included: [ipython] installed as a uv tool, and [pytest], and [pytest-cov] installed as development dependencies.
 * A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save (via EmeraldWalk's [Run on Save]), plus other Makefile tasks within the sidebar (via Carlos A. Gomes' [Make support and task provider].)
 * A GitHub repo will be set up for your project automatically, with the initial code pushed into it. 
 
@@ -25,7 +25,7 @@ _______
 
 * See Assumptions above.
 
-* [Install Uv](https://docs.astral.sh/uv/getting-started/installation/) then Cookiecutter using `uv tool install cookiecutter`. This makes Cookiecutter available as a [user-wide tool](https://docs.astral.sh/uv/getting-started/features/#tools). This is what I do.
+* [Install uv](https://docs.astral.sh/uv/getting-started/installation/) then Cookiecutter using `uv tool install cookiecutter`. This makes Cookiecutter available as a [user-wide tool](https://docs.astral.sh/uv/getting-started/features/#tools). This is what I do.
 
   OR
 
@@ -38,7 +38,7 @@ Now generate the project:
 
 The setup does several things:
   - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python version that will be installed by Rye.
-  - Installs the GitHub CLI and/or Uv via Homebrew, if they aren't installed already.
+  - Installs the GitHub CLI and/or uv via Homebrew, if they aren't installed already.
   - Pulls your GitHub username and PAT from Git Credential Manager and uses them to authenticate to your account.
   - Checks for the existence of the Repo name on your GitHub account; if it's already there, the setup aborts with an error.
   - `git init` is called inside the project directory to create a Git repo.
@@ -111,7 +111,7 @@ This is what your new project will look like:
 
 
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
-[Uv]: https://docs.astral.sh/uv/
+[uv]: https://docs.astral.sh/uv/
 [ipython]: https://ipython.org
 [pytest]: https://docs.pytest.org/en
 [Run on Save]: https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave
