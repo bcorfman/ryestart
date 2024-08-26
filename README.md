@@ -92,7 +92,7 @@ This is what your new project will look like:
     ├── LICENSE               <- The project's MIT license with your name.
     ├── README.md             <- The top-level README for developers using this project.
     ├── Makefile              <- Configure/build/formatting/test tasks that can be run from the command-line. 
-    ├── main.py               <- The top-level application file.
+    ├── main.py               <- Top-level application file (if you want to use it).
     ├── pyproject.toml        <- Rye-compatible TOML file reproducing the development environment
     │    
     ├── .vscode               <- Visual Studio Code configuration files
