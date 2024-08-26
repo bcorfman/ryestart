@@ -1,15 +1,13 @@
-# ryestart
+# ultraviolet
 
-My opinionated [Cookiecutter] template for beginning a Python application with Rye dependency management and other modern tooling.
-
-To be clear, this template is **NOT** for Python libraries. 
+My opinionated [Cookiecutter] template for beginning a Python application with Uv dependency management and other modern tooling.
 
 _____
 ## Features
 
-* [Rye] and pyproject.toml for managing packages and virtualenvs. Rye also [downloads and installs Python versions automatically](https://rye-up.com/guide/commands/pin/) if needed, so you don't have to.
+* [Uv] and pyproject.toml for managing packages and virtualenvs. Uv also [downloads and installs Python versions automatically](https://docs.astral.sh/uv/#python-management) if needed, so you don't have to.
 * A Makefile for handling project tasks. (Noah Gift on [Why You Would Want a Makefile in Your Python Project](https://www.youtube.com/watch?v=Kvxaj6pHeVA&t=624s).)
-* Batteries included: [ipython], [pytest], and [pytest-cov] installed as development dependencies.
+* Batteries included: [ipython] installed as a Uv tool, and [pytest], and [pytest-cov] installed as development dependencies.
 * A set of VSCode files (`extensions.json`, `launch.json` and `settings.json`) that will configure debug mode, Pytest execution, auto format/lint on save (via EmeraldWalk's [Run on Save]), plus other Makefile tasks within the sidebar (via Carlos A. Gomes' [Make support and task provider].)
 * A GitHub repo will be set up for your project automatically, with the initial code pushed into it. 
 
@@ -27,7 +25,7 @@ _______
 
 * See Assumptions above.
 
-* [Install Rye](https://rye-up.com) then Cookiecutter using `rye tools install cookiecutter`. This makes Cookiecutter available as a [global tool](https://rye-up.com/guide/tools/). This is what I do.
+* [Install Uv](https://docs.astral.sh/uv/getting-started/installation/) then Cookiecutter using `uv tool install cookiecutter`. This makes Cookiecutter available as a [user-wide tool](https://docs.astral.sh/uv/getting-started/features/#tools). This is what I do.
 
   OR
 
@@ -36,15 +34,15 @@ _______
 
 Now generate the project:
 
-    cookiecutter gh:bcorfman/ryestart
+    cookiecutter gh:bcorfman/ultraviolet
 
 The setup does several things:
   - Prompts for a few needed project configuration details like Project/Repo name, Author name, email and desired Python version that will be installed by Rye.
-  - Installs the GitHub CLI and/or Rye via Homebrew, if they aren't installed already.
+  - Installs the GitHub CLI and/or Uv via Homebrew, if they aren't installed already.
   - Pulls your GitHub username and PAT from Git Credential Manager and uses them to authenticate to your account.
   - Checks for the existence of the Repo name on your GitHub account; if it's already there, the setup aborts with an error.
   - `git init` is called inside the project directory to create a Git repo.
-  - `make devinstall` is executed to install some basic Python dev libraries: `ipython`, `pytest` and `pytest-cov`.
+  - `make devinstall` is executed to install some basic Python dev libraries: `pytest` and `pytest-cov`.
   - Finally, the configured project is committed to the new Git repo and pushed up to your GitHub repo as well. 
 
 Get inside the newly created project:
@@ -54,9 +52,9 @@ Get inside the newly created project:
 _Start working!_
 
 ___
-## Can you modify how ryestart works? Yes!
+## Can you modify how ultraviolet works? Yes!
 
-`ryestart` is built the way I like it. But what if it's not configured the way you work?
+`ultraviolet` is built the way I like it. But what if it's not configured the way you work?
 
 * One regular annoyance is that Cookiecutter will always prompt you for your name and your email ... Unless you like typing these over and over, the best thing is to create a `.cookiecutterrc` inside your home directory.
   
@@ -68,9 +66,9 @@ ___
     author_email: "h9tbgnbbk@privaterelay.appleid.com"
   ```
   
-* If you want to install different default libraries inside your project besides the ones I've chosen, modify the `devinstall` section of the [Makefile](https://github.com/bcorfman/ryestart/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile).
-* If you want to customize the entire setup process, take a look in [post_gen_project.py](https://github.com/bcorfman/ryestart/blob/main/hooks/post_gen_project.py). 
-* Finally, since `ryestart` has a permissive [license](https://github.com/bcorfman/ryestart/blob/main/LICENSE), fork the project and contribute back via a pull request, or turn that fork into [a standalone repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/detaching-a-fork) and make the customizations your own. 
+* If you want to install different default libraries inside your project besides the ones I've chosen, modify the `devinstall` section of the [Makefile](https://github.com/bcorfman/ultraviolet/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile).
+* If you want to customize the entire setup process, take a look in [post_gen_project.py](https://github.com/bcorfman/ultraviolet/blob/main/hooks/post_gen_project.py). 
+* Finally, since `ultraviolet` has a permissive [license](https://github.com/bcorfman/ultraviolet/blob/main/LICENSE), fork the project and contribute back via a pull request, or turn that fork into [a standalone repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/detaching-a-fork) and make the customizations your own. 
 
 ___________________________
 ## Available Makefile tasks
@@ -102,18 +100,18 @@ This is what your new project will look like:
     |   ├── launch.json       <- Configures VSCode to run and debug the project.
     |   └── settings.json     <- Calls RunOnSave extension to format and lint the code whenever the project is saved.
     |
-    ├── core                  <- Core Python source files
+    ├── src/[module_name]     <- Core Python source files
     |   ├── __init__.py       <- Makes the core directory a module that can be imported
-    |   └── hello.py          <- A starter submodule that prints "Hello World!"
+    |   └── example.py        <- A starter submodule that prints "Hello World!"
     |
     └── tests                     
         ├── __init__.py       <- Makes the tests directory a module that can be imported
-        └── test_hello.py     <- tests that "Hello World!" is printed by the core.hello module
+        └── test_example.py   <- tests that "Hello World!" is printed by the example module
 
 
 
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
-[Rye]: https://rye-up.com
+[Uv]: https://docs.astral.sh/uv/
 [ipython]: https://ipython.org
 [pytest]: https://docs.pytest.org/en
 [Run on Save]: https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave
