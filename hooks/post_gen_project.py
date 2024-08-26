@@ -7,7 +7,7 @@ PROJECT_DIRECTORY = Path.cwd()
 MODULE_NAME = "{{ cookiecutter.repo_name }}"
 
 brew_working = False
-gh_cli_and_rye_installed = False
+gh_cli_and_uv_installed = False
 git_initialized = False
 install_complete = False
 auth_to_github = False
@@ -79,10 +79,10 @@ def main():
         if not gh_cli_installed:
             print("Could not perform brew install for GitHub CLI.")
             return 
-    if 'rye' not in output: 
-        rye_installed = subproc("brew install rye")
-        if not rye_installed:
-            print("Could not perform brew install for Rye.")
+    if 'uv' not in output: 
+        uv_installed = subproc("brew install uv")
+        if not uv_installed:
+            print("Could not perform brew install for uv.")
             return 
     
     username = None

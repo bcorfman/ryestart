@@ -60,4 +60,4 @@ select = [
     # isort
     "I",
 ]
-extend-fixable = ["B"]
+extend-fixable = ["E", "F", "UP", "B", "SIM", "I"]
