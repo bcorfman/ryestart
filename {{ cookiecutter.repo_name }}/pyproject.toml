@@ -9,8 +9,7 @@ license = "MIT"
 readme = "README.md"
 requires-python = ">= {{ cookiecutter.python_version }}"
 
-[tool.rye]
-managed = true
+[tool.uv]
 dev-dependencies = [
 ]
 
