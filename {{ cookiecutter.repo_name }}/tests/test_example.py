@@ -1,4 +1,4 @@
-from {{ cookiecutter.package_name }}.example import hello_world
+from {{ cookiecutter.source_directory }}.example import hello_world
 
 
 def test_hello_world(capsys):
