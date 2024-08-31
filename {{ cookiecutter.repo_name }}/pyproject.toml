@@ -3,36 +3,25 @@ name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
 description = "{{ cookiecutter.description }}"
 authors = [{name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"}]
-dependencies = [
-]
 license = "MIT"
 readme = "README.md"
 requires-python = ">= {{ cookiecutter.python_version }}"
+dependencies = [
+]
 
 [tool.uv]
 dev-dependencies = [
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.metadata]
-allow-direct-references = true
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/{{ cookiecutter.repo_name }}"]
-
-
 [tool.pytest.ini_options]
-addopts = "--cov-branch --cov-report term --cov=src"
+addopts = "--cov-branch --cov-report term --cov=core"
 testpaths = ["tests"]
 filterwarnings = ["ignore::DeprecationWarning"]
 markers=["unit: Unit tests.",
          "system: System (browser-based) tests."]
          
 [tool.coverage.run]
-source = ["src"]
+source = ["core"]
 
 [tool.ruff]
 line-length = 120
