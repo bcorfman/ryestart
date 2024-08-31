@@ -100,7 +100,7 @@ This is what your new project will look like:
     |   ├── launch.json       <- Configures VSCode to run and debug the project.
     |   └── settings.json     <- Calls RunOnSave extension to format and lint the code whenever the project is saved.
     |
-    ├── src/[module_name]     <- Core Python source files
+    ├── [source_directory]    <- Core Python source files
     |   ├── __init__.py       <- Makes the core directory a module that can be imported
     |   └── example.py        <- A starter submodule that prints "Hello World!"
     |
