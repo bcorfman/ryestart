@@ -1,6 +1,6 @@
 # ultraviolet
 
-My opinionated [Cookiecutter] template for beginning a Python application with uv dependency management and other modern tooling.
+My opinionated [Cookiecutter] template for beginning a Python application (not a library!) with uv dependency management and other modern tooling.
 
 _____
 ## Features
