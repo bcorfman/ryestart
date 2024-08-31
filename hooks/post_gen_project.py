@@ -85,7 +85,7 @@ def main():
             print("Could not perform brew install for uv.")
             return 
     else:
-        uv_upgraded = subproc("brew upgrade uv")
+        uv_upgraded = subproc("brew upgrade uv -q")
         if not uv_upgraded:
             print("Could not perform 'brew upgrade' command for uv.")
             return 
